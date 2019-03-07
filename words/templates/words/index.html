@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>{{ chars|default:"Home"|title }} - WordLink Solver</title>
+    <title>{{ chars|default:"Home"|title }} - Word Puzzle Solver</title>
 </head>
 <body>
 
@@ -27,11 +27,11 @@
                     <form method="post">
                         <div class="form-group">
                             <label for="chars">Display Characters</label>
-                            <input type="text" class="form-control" name="chars" value="{{ chars }}" placeholder="Type characters to make word">
+                            <input type="text" class="form-control" name="chars" value="{{ chars|default:"words" }}" placeholder="Type characters to make word">
                         </div>
                         <div class="form-group">
                             <label for="number">Number of Letter</label>
-                            <input class="form-control" id="number" name="number" value="{{ number|default:"3" }}">
+                            <input class="form-control" id="number" name="number" value="{{ number|default:"4" }}">
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Submit</button>
                     </form>
