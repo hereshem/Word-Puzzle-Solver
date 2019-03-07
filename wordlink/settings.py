@@ -25,7 +25,7 @@ SECRET_KEY = 'ys!pvdu=6_(fhudh0x-m1l8@ietojmjjb0ifwr01n=o!!j@d8j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["0.0.0.0", "127.0.0.1", "localhost", "words.hem.xyz.np"]
 
 
 # Application definition
