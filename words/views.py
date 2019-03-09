@@ -1,4 +1,6 @@
+from django.http import HttpResponse
 from django.shortcuts import render
+import json
 
 # Create your views here.
 w = []
@@ -26,6 +28,22 @@ def home(request):
         chars = request.POST.get("chars")
         data["number"] = number
         data["chars"] = chars
-        if number and chars and number.isdigit():
+        if chars and number and number.isdigit():
             data["words"] = find_words(int(number), chars.lower())
     return render(request, "words/index.html", data)
+
+def api(request):
+    data = {}
+    chars = request.GET.get("chars")
+    number = request.GET.get("length")
+    if chars and number and number.isdigit():
+        results = find_words(int(number), chars.lower())
+        data["chars"] = chars
+        data["length"] = number
+        data["result_count"] = len(results)
+        data["total_count"] = len(w)
+        data["results"] = results
+    else:
+        data["error"] = True
+        data["message"] = "'chars' and 'length' are compulsory fields"
+    return HttpResponse(json.dumps(data), "application/json")

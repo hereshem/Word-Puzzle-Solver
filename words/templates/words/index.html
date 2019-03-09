@@ -7,8 +7,28 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
     <title>{{ chars|default:"Home"|title }} - Word Puzzle Solver</title>
+
+    <!-- SEO Optimizations -->
+    <meta content="Word Puzzle Solver" name="keywords">
+    <meta content="Solve the word problem in much easier way then ever was." name="description">
+
+    <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+    <meta property="og:title" content="Word Puzzle Solver">
+    <meta property="og:image" content="http://words.hem.xyz.np/static/words/img/word-puzzle.png">
+    <meta property="og:url" content="http://words.hem.xyz.np/">
+    <meta property="og:site_name" content="Word Puzzle Solver">
+    <meta property="og:description" content="Solve the word problem in much easier way then ever was.">
+
+    <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="http://words.hem.xyz.np/">
+    <meta name="twitter:title" content="Word Puzzle Solver">
+    <meta name="twitter:description" content="Solve the word problem in much easier way then ever was.">
+    <meta name="twitter:image" content="http://words.hem.xyz.np/static/words/img/word-puzzle.png">
+
+    <!-- Favicon -->
+    <link href="/static/words/img/favicon.ico" rel="icon">
 </head>
 <body>
 
@@ -17,7 +37,7 @@
         <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-12">
             <div class="card mt-5">
                 <div class="card-header text-center"><b>Word Puzzle Solver</b></div>
-                <img class="card-img-top" src="/static/words/img/word-puzzle.png" alt="Card image cap">
+                <img class="card-img-top" src="/static/words/img/word-puzzle.png" alt="Word Puzzle Solver">
                 <div class="card-body">
                     <p class="card-subtitle text-muted">
                         Word Puzzle Solver is designed to solve your dictionary words related problem.
@@ -33,7 +53,7 @@
                             <label for="number">Number of Letter</label>
                             <input class="form-control" id="number" name="number" value="{{ number|default:"4" }}">
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        <button type="submit" class="btn btn-primary w-100">Filter from 113,809 words</button>
                     </form>
                 </div>
             </div>
